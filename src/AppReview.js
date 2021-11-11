@@ -1,7 +1,7 @@
 import React from 'react'
 import Review from './Review'
 import './Review.css'
-import { faChevron } from 'react-icons/fa'
+
 
 export default function App() {
     return (
