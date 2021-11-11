@@ -2,11 +2,13 @@
 
 This project highlights several tours and how to manage your tours.
 
-## Available Scripts
+## To get started
 
-In the project directory, you can run:
+Clone the project
 
-### `yarn start`
+### `npm install`
+
+### `npm start`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
