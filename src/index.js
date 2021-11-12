@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 //import App from './App';
-import App from './AppMenu';
+import App from './AppGrocery';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
