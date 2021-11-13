@@ -1,12 +1,14 @@
 import React from 'react';
-import { FaChevronLeft, FaChevronRight, FaQuoteRight } from 'react-icons/fa'
+import { FaEdit, FaTrash } from 'react-icons/fa'
 
-const ListGrocery = ({ key, list }) => {
+const ListGrocery = ({ list, deleteList, editList }) => {
+    const { id, grocery } = list
     return (
         <div>
-            <li>{list}</li>
-            <span onClick={() => deleteList(key)}>X</span>
-            <FaChevronRight />
+            <li>{grocery}</li>
+            <span onClick={() => deleteList(id)}><FaTrash /></span>
+            <div onClick={() => editList(id, grocery)}><FaEdit /></div>
+
         </div>
 
     );
