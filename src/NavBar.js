@@ -1,19 +1,28 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { links, social } from './dataNavBar'
 import './NavBar.css'
 import logo from './logo.svg'
 import { FaBars } from 'react-icons/fa';
-import { useState } from 'react';
+
+
 
 const NavBar = (props) => {
     const [showlinks, setShowLinks] = useState(false)
-    const linkRef = useRef()
+    const linkRef = useRef(null)
+    const linkContainerRef = useRef(null)
+
 
     const handleToggle = () => {
         setShowLinks(!showlinks)
         // const height = linkRef.current.ScrollHeight
         // console.log(height)
     }
+
+    useEffect(() => {
+        const linkHeight = linkRef.current.scrollHeight
+        console.log(linkHeight)
+        showlinks ? linkContainerRef.current.style.height = `${linkHeight}px` : linkContainerRef.current.style.height = '0px'
+    }, [showlinks])
 
 
     return (
@@ -25,8 +34,9 @@ const NavBar = (props) => {
                     <button className="nav-toggle" onClick={() => handleToggle()}><FaBars /></button>
 
                 </div>
-                <div ref={linkRef} className="links-container" style={showlinks ? { height: linkRef.current.scrollHeight } : { height: "0px" }}>
-                    <ul className="links">
+                {/* <div ref={linkRef} className="links-container" style={showlinks ? { height: linkRef.current.scrollHeight } : { height: "0px" }}> */}
+                <div ref={linkContainerRef} className="links-container" >
+                    <ul ref={linkRef} className="links">
                         {
                             showlinks && (
 
