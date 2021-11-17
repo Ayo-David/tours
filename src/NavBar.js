@@ -19,7 +19,7 @@ const NavBar = (props) => {
     }
 
     useEffect(() => {
-        const linkHeight = linkRef.current.scrollHeight
+        const linkHeight = linkRef.current.getBoundingClientRect().height
         console.log(linkHeight)
         showlinks ? linkContainerRef.current.style.height = `${linkHeight}px` : linkContainerRef.current.style.height = '0px'
     }, [showlinks])
@@ -34,8 +34,8 @@ const NavBar = (props) => {
                     <button className="nav-toggle" onClick={() => handleToggle()}><FaBars /></button>
 
                 </div>
-                {/* <div ref={linkRef} className="links-container" style={showlinks ? { height: linkRef.current.scrollHeight } : { height: "0px" }}> */}
-                <div ref={linkContainerRef} className="links-container" >
+                <div ref={linkContainerRef} className="links-container" style={showlinks ? { height: linkRef.current.scrollHeight } : { height: "0px" }}>
+                    {/* <div ref={linkContainerRef} className="links-container" > */}
                     <ul ref={linkRef} className="links">
                         {
                             showlinks && (
