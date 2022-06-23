@@ -7,6 +7,7 @@ const StateContext = createContext()
 export const MyContextProvider = ({ children }) => {
     const [showSidebar, SetShowSidebar] = useState(false)
     const [showModal, SetShowModal] = useState(false)
+    const [showSubMenu, SetShowSubMenu] = useState(false)
 
     const openSidebar = () => {
         SetShowSidebar(true)
@@ -20,9 +21,25 @@ export const MyContextProvider = ({ children }) => {
     const closeModal = () => {
         SetShowModal(false)
     }
+    const openSubMenu = () => {
+        SetShowSubMenu(true)
+    }
+    const closeSubMenu = () => {
+        SetShowSubMenu(false)
+    }
 
     return (
-        <StateContext.Provider value={{ showSidebar, openSidebar, closeSidebar, showModal, openModal, closeModal }}>
+        <StateContext.Provider value={{
+            showSidebar,
+            openSidebar,
+            closeSidebar,
+            showModal,
+            openModal,
+            closeModal,
+            showSubMenu,
+            openSubMenu,
+            closeSubMenu
+        }}>
             {children}
         </StateContext.Provider>
     )
