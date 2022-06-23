@@ -1,12 +1,14 @@
 import React from 'react';
 import { FaBars } from 'react-icons/fa';
 import './Modal.css'
+import useDataLayer from './DataLayer';
 
-const Home = (props) => {
+const Home = ({ toggleSidebar }) => {
+    const { openSidebar, openModal } = useDataLayer()
     return (
         <main>
-            <button className="sidebar-toggle"><FaBars /></button>
-            <button className="btn">Show Modal</button>
+            <button className="sidebar-toggle" onClick={openSidebar}><FaBars /></button>
+            <button className="btn" onClick={openModal}>Show Modal</button>
         </main>
     );
 }
