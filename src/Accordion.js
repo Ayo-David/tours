@@ -5,6 +5,7 @@ import AccordionItem from './AccordionItem'
 
 export default function Accordion() {
     const [questions, setQuestions] = useState(data)
+    const [click, setClick] = useState(false)
 
 
     const toggleClick = () => {
