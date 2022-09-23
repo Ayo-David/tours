@@ -2,7 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 //import App from './App';
-import App from './AppSideBarModal';
+//import App from './Grocery/AppGrocery';
+//import App from './FunctionalStateUpdates'
+///import App from './Slides/index'
+import App from './Reviews/AppReview'
 import { MyContextProvider } from './DataLayer';
 import reportWebVitals from './reportWebVitals';
 
