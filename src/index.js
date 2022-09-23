@@ -4,8 +4,8 @@ import './index.css';
 //import App from './App';
 //import App from './Grocery/AppGrocery';
 //import App from './FunctionalStateUpdates'
-///import App from './Slides/index'
-import App from './Reviews/AppReview'
+import App from './Slides/index'
+//import App from './Reviews/AppReview'
 import { MyContextProvider } from './DataLayer';
 import reportWebVitals from './reportWebVitals';
 

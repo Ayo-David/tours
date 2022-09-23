@@ -14,11 +14,23 @@ function Slides({ slides }) {
     setIndex(index + 1)
   }
 
+  const checkIndex = () => {
+    if (index === slides.length - 1) {
+      return { ...disabled, next: true, prev: false }
+    } else if (index === 0) {
+      return { ...disabled, prev: true }
+    } else {
+      return { ...disabled, prev: false, next: false, start: false }
+    }
+
+  }
+
   useEffect(() => {
-    index === slides.length - 1 ?
-      (setDisabled({ ...disabled, next: true, prev: false }))
-      : index === 0 ? setDisabled({ ...disabled, prev: true })
-        : setDisabled({ ...disabled, prev: false, next: false, start: false })
+    // index === slides.length - 1 ?
+    //   (setDisabled({ ...disabled, next: true, prev: false }))
+    //   : index === 0 ? setDisabled({ ...disabled, prev: true })
+    //     : setDisabled({ ...disabled, prev: false, next: false, start: false })
+    setDisabled(checkIndex())
     console.log('myindex', index)
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
