@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from './images/logo.svg'
+import logo from '../images/logo.svg'
 import sublinks from './dataSubmenu';
 import { FaBars } from 'react-icons/fa';
 import './SubMenu.css'

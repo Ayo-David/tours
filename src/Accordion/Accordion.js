@@ -8,14 +8,14 @@ export default function Accordion() {
 
 
     const toggleClick = () => {
-        setClick(!click)
+        // setClick(!click)
     }
 
     return (
         <div>
             {questions.map((question, i) => {
                 return (
-                    <AccordionItem key={i} question={question} toggleClick={toggleClick} click={click} />
+                    <AccordionItem key={i} question={question} toggleClick={toggleClick} />
                 )
             })}
         </div>
