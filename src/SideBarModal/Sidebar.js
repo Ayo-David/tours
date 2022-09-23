@@ -1,7 +1,7 @@
 import React from 'react';
 import { FaTimes } from 'react-icons/fa';
 import { links, social } from './dataModal';
-import logo from './logo.svg'
+import logo from '../logo.svg'
 import './Modal.css'
 import useDataLayer from './DataLayer';
 
