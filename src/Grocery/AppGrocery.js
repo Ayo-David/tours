@@ -32,7 +32,6 @@ export default function AppGrocery() {
         //setAlerts({ show: true, type: 'Success', msg: `${input} Added` })
         setAlerts(showAlert(true, 'Success', `${input} Added`))
 
-        //using status State
         const newStatus = { ...status }
         newStatus['add'] = true
         setStatus(newStatus)
@@ -50,6 +49,9 @@ export default function AppGrocery() {
         const newStatus = { ...status }
         newStatus['deleted'] = true
         setStatus(newStatus)
+
+        //OR
+        //s etStatus({...status, deleted:true})
     }
 
     const editList = (id, grocery) => {
@@ -89,7 +91,7 @@ export default function AppGrocery() {
             return () => clearTimeout(timeout)
         }
 
-    }, [status])
+    }, [status, alerts])
 
     useEffect(() => {
         localStorage.setItem('list', JSON.stringify(list))
