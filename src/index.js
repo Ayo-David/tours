@@ -5,10 +5,10 @@ import './index.css';
 //import App from './Grocery/AppGrocery';
 //import App from './FunctionalStateUpdates'
 //import App from './Slides/index'
-//import App from './Accordion/AppAccordion'
+import App from './Accordion/AppAccordion'
 //import App from './FoodMenu/AppMenu'
 //import App from './NavBar/AppNavBar'
-import App from './SideBarModal/AppSideBarModal'
+//import App from './SideBarModal/AppSideBarModal'
 //import App from './SubMenu/AppSubMenu'
 //import App from './Reviews/AppReview'
 import { MyContextProvider } from './SideBarModal/DataLayer';
